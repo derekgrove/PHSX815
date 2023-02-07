@@ -1,0 +1,37 @@
+Pseudo code explaining how my program will work, approximately.
+*thoughts, I want to make a probablity distribution that is that of a particle collision, maybe e- + e+ -> muons, gamma, etc.
+
+define defualt collision energy;
+define default number of experiments;
+Define a probability distribution here{
+    calculate expected results of collisions based on energy;
+    split range from 0 - 1 into 4 slices, each slice's range is dependent on the distribution calculated above;   
+}
+
+add in functionality to take arguments from terminal to change collision energy;
+add in functionality to take arguments from terminal to change number of experiments;
+
+
+
+for number of experiments {
+generate a random number between 0 and 1, compare to our above distribution, return the verdict (muon, gamma, etc.)
+ (probably have the verdict returned as 0, 1, 2, 3... where 1 = muon, 2 = gamma, etc. reason for this is to make later analysis easier, analyzing ints instead of strings like "muon", "gamma", etc.)
+}
+
+End program one _____________________________________________
+
+In another file, our analysis program:
+
+code here to bring in .txt file as our input;
+pass the data from .txt file into an array;
+
+generate histogram, make number of bins = number of results possible from my previously defined distribution, use plot parameters to name the bins "muon", "gamma", etc.;
+start iterating through the array, filling each bin;
+show.plot;
+
+
+
+
+
+
+
