@@ -29,6 +29,18 @@ generate histogram, make number of bins = number of results possible from my pre
 start iterating through the array, filling each bin;
 show.plot;
 
+Calculate log likelihood ratio of data I simulated (using hyptohesis 1) over hypothesis 1 
+
+both hypothesis go into log likelihood ratio, only one of the hypothesis is postulated as true at a time though. rinse and repeat for multiple hypothesis. The log likelihood ratio is the thing we will observe to make an observation of our data. 
+the log likelihood ratio has all the information possible to make a conclusion about that particular hypothesis. 
+
+as N (number of experiments) becomes bigger, we get a better chance of distinguishing the log likelihood ratios. 
+
+ok, so in the analyze data file, I should iterate through some hypothesis, "gamma will be produced with int_hypothesis probability" , int_hypothesis++, loop back.
+store the result, after loop of iterations end, sort the array of these results and go with the one that has the log likelihood ratio closest to 1????? 
+
+
+can also plot the log likelihood ratio, should definitely do that. We pick a threshold before we run the analysis, if log likelihood ratio is above or equal to that threshold we choose that hypothesis ????
 
 
 
