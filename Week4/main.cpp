@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
     //define collision energy here, needs to be configurable via terminal. This is just the default value:
-    double Ce = 2000;
+    double Ce = 500;
     // define number of experiments here, also configurable via terminal later in this project
     int Nexp = 10;
     //create an array of all decay products in order of mass (GeV/c^2)
