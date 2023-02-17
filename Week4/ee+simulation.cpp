@@ -33,7 +33,6 @@ int main(int argc, char *argv[]) {
     std::vector<double> product_masses = {0.000000001, 0.00000017, 0.0000182, 0.000511, 0.0022, 0.0047, 0.096, 0.10566,
                                           1.28, 1.7768, 4.18, 173.1};
     //Ask KC why the nuetrinos oscillate if they have different masses? and by this much? seems impossible.
-    int masses_size = product_masses.size();
 
     // here is where we need to check our collision energy against our array of product masses, remember, 2x the product masses because
     // we will be making one matter and one antimatter pair.
@@ -41,7 +40,7 @@ int main(int argc, char *argv[]) {
     //define an integer to be incremented as we compare our collision energy to our product mass array
     unsigned int counter = 0;
     int j = 0;
-    while (j < masses_size && Ce >= 2.0 * product_masses[j]) {
+    while (j < names_size && Ce >= 2.0 * product_masses[j]) {
         if (Ce > product_masses[j]) {
             counter++;
         }

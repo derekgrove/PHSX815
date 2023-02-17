@@ -32,20 +32,19 @@ int main(int argc, char *argv[]) {
     //create an array of all the decay products mass, same order of increasing mass (product_names[i] corresponds to product_mass[i])
     std::vector<double> product_masses = {0.000000001, 0.00000017, 0.0000182, 0.000511, 0.0022, 0.0047, 0.096, 0.10566,
                                           1.28, 1.7768, 4.18, 173.1};
-    int masses_size = product_masses.size();
 
     //define an integer to be incremented as we compare our collision energy to our product mass array
-    unsigned int counter = 0;
+    unsigned int possible_products_size = 0;
     int j = 0;
-    while (j < masses_size && Ce >= 2.0 * product_masses[j]) {
+    while (j < names_size && Ce >= 2.0 * product_masses[j]) {
         if (Ce > product_masses[j]) {
-            counter++;
+            possible_products_size++;
         }
         j++;
     }
 
     // now we create a "possible products" array, this is just a reduced length version of our product_arrays from above.
-    int possible_products_size = counter;
+
     std::vector<double> possible_products(possible_products_size);
 
     for (int i = 0; i < possible_products_size; i++) {
