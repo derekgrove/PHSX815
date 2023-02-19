@@ -34,17 +34,17 @@ int main(int argc, char *argv[]) {
                                           1.28, 1.7768, 4.18, 173.1};
 
     //define an integer to be incremented as we compare our collision energy to our product mass array
-    unsigned int possible_products_size = 0;
+    unsigned int counter = 0;
     int j = 0;
     while (j < names_size && Ce >= 2.0 * product_masses[j]) {
         if (Ce > product_masses[j]) {
-            possible_products_size++;
+            counter++;
         }
         j++;
     }
 
     // now we create a "possible products" array, this is just a reduced length version of our product_arrays from above.
-
+    int possible_products_size = counter;
     std::vector<double> possible_products(possible_products_size);
 
     for (int i = 0; i < possible_products_size; i++) {

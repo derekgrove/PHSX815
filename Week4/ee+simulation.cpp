@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
     //define collision energy here, needs to be configurable via terminal. This is just the default value:
-    double Ce = 500;
+    double Ce = 5;
     // define number of experiments here, also configurable via terminal later in this project
     int Nexp = 10;
     //create an array of all decay products in order of mass (GeV/c^2)
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     //define an integer to be incremented as we compare our collision energy to our product mass array
     unsigned int counter = 0;
     int j = 0;
-    while (j < names_size && Ce >= 2.0 * product_masses[j]) {
+    while (j < masses_size && Ce >= 2.0 * product_masses[j]) {
         if (Ce > product_masses[j]) {
             counter++;
         }
