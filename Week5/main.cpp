@@ -114,7 +114,14 @@ int main(int argc, char *argv[]) {
 
     double analytic_result = std::pow(b, 6)/6 + 8*b -std::pow(a, 6)/6 - 8*a;
 
-    std::cout << "The numerical integration of y = x^5 + 8 from " << a << " to " << b << " with " << intervals << " intervals is: " << integral << std::endl;
+    if (type == 0) {
+        std::cout << "The numerical integration of y = x^5 + 8 from " << a << " to " << b << " with " << intervals
+                  << " intervals is: " << integral << std::endl;
+    }
+    else {
+        std::cout << "The quadrature integration of y = x^5 + 8 from " << a << " to " << b << " with quadrature " << quadrature
+                  << " is: " << integral << std::endl;
+    }
     std::cout << "for comparison, the analytic result for the integral is x^6/6 + 8x + C, and with limits " << a << " to " << b << " we get result: " << analytic_result << " + C" << std::endl;
     return 0;
 }
